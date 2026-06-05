@@ -1,0 +1,15 @@
+package com.projetFe.Event.security;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AuthentificationRequest {
+    private String email ;
+    private String code ;
+
+}
