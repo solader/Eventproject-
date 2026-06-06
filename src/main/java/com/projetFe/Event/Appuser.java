@@ -11,9 +11,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name="appuser")
-public class Appuser {
-
-
+public class Appuser { /* hhhhhhhhhhhhhhhhhhhhhhhhh */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
