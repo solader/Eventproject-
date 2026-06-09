@@ -10,21 +10,21 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name="appuser")
-public class Appuser {
-
+@Table(name="Appuser")
+public class Appuser{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
     private String nom ;
     private String prenom ;
     private int age ; // Ou on faire int
-    private String ville ;
-    private String adresse ;
+    private String ville_residence ;
+    private String adresse_local ;
     private String phone ;
     private String email ;
     private String password ;
-    //private Genre genre;
+    private String confirm_password ;
+
     private String Cne ;
     @OneToOne( cascade = CascadeType.ALL ,  fetch = FetchType.EAGER)
     @JoinColumn(name = "imagecarte_id")
@@ -43,10 +43,10 @@ public class Appuser {
     private Role role = Role.ORGANISATEUR;
     public Appuser (){}
 
-    public Appuser(String nom, String prenom, int age,String ville , String phone, String email, String password , Role role ) {
+    public Appuser(String nom, String prenom, int age,String ville , String phone, String email, String password ,String confirm_password , Role role ) {
         this.nom = nom;
         this.prenom = prenom;
-        this.ville = ville ;
+        this.ville_residence  = ville ;
         this.age = age;
         this.phone = phone;
         this.email = email;

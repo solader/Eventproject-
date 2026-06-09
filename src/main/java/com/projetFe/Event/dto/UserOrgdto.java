@@ -19,7 +19,7 @@ public class UserOrgdto {
     private String nom ;
     private String prenom ;
     private int age ;
-    private String ville ;
+    private String ville_residence ;
     // private String region ;
     private  String adresse ;
     private String phone ;

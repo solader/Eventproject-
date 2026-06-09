@@ -54,7 +54,6 @@ public class Appusercontroller {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         Appuser us=  appuserRepository.save(user) ;
         return ResponseEntity.ok(us).getBody();
-
          */
         // 1. encoder le password
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -64,6 +63,7 @@ public class Appusercontroller {
         userplace.setPrenom(user.getPrenom());
         userplace.setEmail(user.getEmail());
         userplace.setAge(user.getAge());
+        userplace.setVille_residence(user.getVille_residence());
         userplace.setRole(Role.RESERVEUR);
         userplace.setPassword(user.getPassword());
         // 2. sauvegarder user
@@ -114,7 +114,7 @@ public class Appusercontroller {
         userplace.setNom(user.getNom());
         userplace.setPrenom(user.getPrenom());
         userplace.setEmail(user.getEmail());
-        userplace.setVille(user.getVille());
+        userplace.setVille_residence(user.getVille_residence());
         userplace.setAge(user.getAge());
         userplace.setRole(Role.ORGANISATEUR);
         userplace.setPassword(user.getPassword());

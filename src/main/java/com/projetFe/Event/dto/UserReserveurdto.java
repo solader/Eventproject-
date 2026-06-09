@@ -10,7 +10,7 @@ public class UserReserveurdto {
     private String nom ;
     private String prenom ;
     private int age ;
-    private String ville ;
+    private String ville_residence ;
     // private String region ;
     private String phone ;
     private String email ;
